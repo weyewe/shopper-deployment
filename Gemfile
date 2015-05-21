@@ -19,6 +19,9 @@ gem 'delayed_job_active_record'
 gem 'prawn', git: 'git://github.com/prawnpdf/prawn.git'
 gem 'pg_search'
 
+gem 'mina-sidekiq', :require => false
+gem 'mina-unicorn', :require => false
+
 platforms :rbx do 
   gem 'minitest'
   gem 'rubysl'
