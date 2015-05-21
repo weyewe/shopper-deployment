@@ -2,7 +2,7 @@ require 'mina/bundler'
 require 'mina/rails'
 require 'mina/git'
 require 'mina/rbenv'
-require 'mina_sidekiq/tasks'
+# require 'mina_sidekiq/tasks'
 require 'mina/unicorn'
 
 # Basic settings:
@@ -64,7 +64,7 @@ task :deploy => :environment do
   deploy do
 
     # stop accepting new workers
-    invoke :'sidekiq:quiet'
+    # invoke :'sidekiq:quiet'
 
     invoke :'git:clone'
     invoke :'deploy:link_shared_paths'
@@ -73,7 +73,7 @@ task :deploy => :environment do
     invoke :'rails:assets_precompile'
 
     to :launch do
-      invoke :'sidekiq:restart'
+      # invoke :'sidekiq:restart'
       invoke :'unicorn:restart'
     end
   end

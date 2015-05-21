@@ -485,8 +485,8 @@ DEPENDENCIES
   jquery-ui-rails
   machinist (>= 2.0.0.beta2)
   meta_search (>= 1.1.0.pre)
-  mina-sidekiq
-  mina-unicorn
+  mina-sidekiq (>= 0.3.0)
+  mina-unicorn (>= 0.0.3)
   minitest
   pg
   pg_search
